@@ -150,7 +150,7 @@ table {
 }
 
 body {
-    background-color: hsl(251, 19%, 35%);
+    background-color: hsl(235, 18%, 26%);
     color: hsl(234, 29%, 20%);
     display: flex;
     align-items: center;
@@ -168,6 +168,8 @@ body {
     border-radius: 20px;
     width: auto;
     height: 70vh;
+    max-height: 670px;
+    min-height: 500px;
 }
 
 #newsletter-form .left {
