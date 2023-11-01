@@ -38,14 +38,20 @@ class Newsletter {
 
         if (!regex.test(userMailHTML.val())) {
             this.emailContainer.addClass('error');
+            $('#email-error-message').attr('aria-hidden', 'false');
+            $('#newsletter-email-address').attr('aria-invalid', 'true');
+            
             this.emailError = true;
             return false;
         }
-
+        
         this.userMail = userMailHTML.val();
-
+        
         if (this.emailError) {
             $(this.emailContainer.removeClass('error'));
+            $('#email-error-message').attr('aria-hidden', 'true');
+            $('#newsletter-email-address').attr('aria-invalid', 'false');
+
             this.emailError = false;
         }
 
